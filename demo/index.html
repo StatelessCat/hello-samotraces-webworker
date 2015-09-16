@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="/samotracesjs/dist/vendors.js"></script>
+    <script type="text/javascript" src="/samotracesjs/dist/samotraces-core-debug.js"></script>
+  </head>
+  <body>
+    HELLO
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        console.log(Samotraces.ktbs);
+        console.log(typeof Samotraces.Ktbs.Base === 'function');
+        var myWorker = new Worker("worker.js");
+        myWorker.postMessage({"msg": "hello"})
+      } );
+    </script>
+  </body>
+</html>
